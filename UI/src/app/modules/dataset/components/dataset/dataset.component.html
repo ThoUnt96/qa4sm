@@ -57,16 +57,16 @@
 <div class="grid  align-content-center">
   <div class="col">
     <span class="p-float-label">
-      <p-dropdown [inputId]="variableSelectorId" optionLabel="short_name" [style]="{'width': '100%'}"
+      <p-dropdown [inputId]="variableSelectorId" optionLabel="display_name" [style]="{'width': '100%'}"
                   [options]="(selectableDatasetVariables$|async)"
                   [(ngModel)]="selectionModel.selectedVariable">
         <ng-template let-item pTemplate="item">
           <span>
-            <span>{{ item.short_name }} [{{ item.unit ? item.unit : 'n.a.' }}]</span>
+            <span>{{ item.display_name }} [{{ item.unit ? item.unit : 'n.a.' }}]</span>
           </span>
       </ng-template>
       <ng-template let-item pTemplate="selectedItem">
-         <span>{{ item.short_name }} [{{ item.unit ? item.unit : 'n.a.' }}]</span>
+         <span>{{ item.display_name }} [{{ item.unit ? item.unit : 'n.a.' }}]</span>
       </ng-template>
 
 

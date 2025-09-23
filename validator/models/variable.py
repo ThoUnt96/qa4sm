@@ -5,6 +5,7 @@ class DataVariable(models.Model):
     short_name = models.CharField(max_length=30)
     pretty_name = models.CharField(max_length=100)
     unit = models.CharField(max_length=20, default='n.a.')
+    display_name = models.CharField(max_length=100, default='n.a.')
     help_text = models.CharField(max_length=150)
 
     min_value = models.FloatField(null=True)
